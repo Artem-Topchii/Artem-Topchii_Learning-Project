@@ -7,7 +7,7 @@ namespace ArtemTopchii_LearningProject_Console
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }
