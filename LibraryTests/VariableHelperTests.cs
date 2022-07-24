@@ -48,7 +48,7 @@ namespace LibraryTests
         [TestCase(0, 0)]
         [TestCase(5, 5)]
         [TestCase(-8, -8)]
-        public void SolveTheTask_WhenABAreEqual_ShouldThrowArgumentException(float a, float b)
+        public void SolveTheTask_WhenABAreEqual_ShouldThrowDivideByZeroException(float a, float b)
         {
             try
             {
@@ -93,7 +93,7 @@ namespace LibraryTests
         [TestCase(-10, 0)]
         [TestCase(12, 0)]
         [TestCase(0, 0)]
-        public void DividingWithRemainder_WhenBIsEqual0_ShouldThrowArgumentException(int a, int b)
+        public void DividingWithRemainder_WhenBIsEqual0_ShouldThrowDivideByZeroException(int a, int b)
         {
             try
             {
@@ -112,12 +112,89 @@ namespace LibraryTests
         [TestCase(2, 0, 0, 0)]
         [TestCase(-5, -2, -8, 1.2f)]
         [TestCase(1.5f, 3.2f, 7, 2.53f)]
-
         public void SolveTheEquation_WhenAIsNotEqual0_ShouldGetResult(float a, float b, float c, float expected)
         {
             float actual = VariableHelper.SolveTheEquation(a, b, c);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0, -7, -4)]
+        [TestCase(0, 18, -8)]
+        [TestCase(0, 0, 0)]
+        public void SolveTheEquation_WhenAIsEqual0_ShouldThrowDivideByZeroException(float a, float b, float c)
+        {
+            try
+            {
+                VariableHelper.SolveTheEquation(a, b, c);
+            }
+            catch (DivideByZeroException)
+            {
+                Assert.Pass();
+            }
+
+            Assert.Fail();
+        }
+
+        [TestCase(3, 7, -1, -2, - 0.25f, -0.25f)]
+        [TestCase(18, -2, 4, 8, 7.6f, -0.2f)]
+        [TestCase(18, 10, 5, 7, 9.5f, -0.25f)]
+        [TestCase(-8, 15, -7, -7, -7, 0)]
+        public void SolveTheEquationOfStraightLine_WhenX1IsNotEqualX2_ShouldGetResult(float x1, float x2, float y1, float y2, float expectedA, float expectedB)
+        {
+            {
+                var actual = VariableHelper.SolveTheEquationOfStraightLine(x1, x2, y1, y2);
+                var expected = (expectedA, expectedB);
+
+                Assert.AreEqual(expected, actual);
+            }
+        }
+
+        [TestCase(1, 1, 7, -4)]
+        [TestCase(18, 18, -8, 8)]
+        [TestCase(0, 0, 1, 0)]
+        [TestCase(-8, -8, -7, -7)]
+        public void SolveTheEquationOfStraightLine_WhenX1IsEqualX2_ShouldThrowDivideByZeroException(float x1, float x2, float y1, float y2)
+        {
+            try
+            {
+                VariableHelper.SolveTheEquationOfStraightLine(x1, x2, y1, y2);
+            }
+            catch (DivideByZeroException)
+            {
+                Assert.Pass();
+            }
+
+            Assert.Fail();
+        }
+
+        [TestCase(23, 5)]
+        [TestCase(5, 5)]
+        [TestCase(-78, -15)]
+        [TestCase(0, 0)]
+        [TestCase(99, 18)]
+        [TestCase(-1, -1)]
+        public void CalculateSumOfDigits_WhenValueDoesNotHaveMoreThanTwoDigits_ShouldGetSumOfDigits(int a, int expected)
+        {
+            int actual = VariableHelper.CalculateSumOfDigits(a);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(127)]
+        [TestCase(-567)]
+        public void CalculateSumOfDigits_WhenValueHasMoreThanTwoDigits_ShouldThrowArgumentException(int a)
+        {
+            try
+            {
+                VariableHelper.CalculateSumOfDigits(a);
+            }
+            catch (ArgumentException)
+            {
+                Assert.Pass();
+            }
+
+            Assert.Fail();
         }
     }
 }
