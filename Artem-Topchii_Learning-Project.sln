@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtemTopchii_LearningProject_Console", "ArtemTopchii_LearningProject_Console\ArtemTopchii_LearningProject_Console.csproj", "{29B2F092-AC8A-420F-A64D-B33E4CCC1065}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArtemTopchii_LearningProject_Console", "ArtemTopchii_LearningProject_Console\ArtemTopchii_LearningProject_Console.csproj", "{29B2F092-AC8A-420F-A64D-B33E4CCC1065}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libraries", "Libraries\Libraries.csproj", "{08B31E12-94DD-410C-AAD1-D3900C391D16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Libraries", "Libraries\Libraries.csproj", "{08B31E12-94DD-410C-AAD1-D3900C391D16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryTests", "LibraryTests\LibraryTests.csproj", "{C8F21BDE-8BAB-4AEC-A035-FD470B860209}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{08B31E12-94DD-410C-AAD1-D3900C391D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08B31E12-94DD-410C-AAD1-D3900C391D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08B31E12-94DD-410C-AAD1-D3900C391D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8F21BDE-8BAB-4AEC-A035-FD470B860209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8F21BDE-8BAB-4AEC-A035-FD470B860209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8F21BDE-8BAB-4AEC-A035-FD470B860209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8F21BDE-8BAB-4AEC-A035-FD470B860209}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
