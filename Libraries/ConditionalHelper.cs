@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Libreries
+namespace Libraries
 {
     public class ConditionalHelper
     {

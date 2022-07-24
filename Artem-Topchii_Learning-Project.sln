@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtemTopchii_LearningProject_Console", "ArtemTopchii_LearningProject_Console\ArtemTopchii_LearningProject_Console.csproj", "{29B2F092-AC8A-420F-A64D-B33E4CCC1065}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libreries", "Libreries\Libreries.csproj", "{08B31E12-94DD-410C-AAD1-D3900C391D16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libraries", "Libraries\Libraries.csproj", "{08B31E12-94DD-410C-AAD1-D3900C391D16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

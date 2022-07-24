@@ -1,4 +1,4 @@
-﻿using Libreries;
+﻿using Libraries;
 using System;
 
 namespace ArtemTopchii_LearningProject_Console

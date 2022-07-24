@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Libreries
+namespace Libraries
 {
     public class MultiDimensionalArrayHelper
     {
