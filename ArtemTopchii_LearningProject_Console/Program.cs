@@ -1,4 +1,4 @@
-﻿using Libreries;
+﻿using Libraries;
 using System;
 
 namespace ArtemTopchii_LearningProject_Console
@@ -7,7 +7,7 @@ namespace ArtemTopchii_LearningProject_Console
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }
